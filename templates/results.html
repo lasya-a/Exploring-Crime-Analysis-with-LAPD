@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2 style="text-align: center;">PREDICTION RESULTS OF AREA, CRIME TYPE, CRIME SEVERITY</h2>
+        <div id="result" class="glow">
+           
+            {% if area %}
+                <p class="area">Area: {{ area }}</p>
+            {% endif %}
+            <!-- Predictions will be printed here -->
+            {% if predictions %}
+                <p class="predictions">Predictions: {{ predictions }}</p>
+            {% endif %}
+            <!-- Severity will be printed here -->
+            {% if severity %}
+                <p class="severity">Severity: {{ severity }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
